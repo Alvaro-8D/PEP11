@@ -1,8 +1,7 @@
 # Investiga usos habituales del fichero __init__.py de un paquete y usa el ejemplo anterior
 # para configurar y probar alguno de ellos.
 
-import math
-from matematicas import operaciones, figuras, conversiones
+import matematicas
 
 def menu():
     """Muestra el menú principal."""
@@ -22,10 +21,10 @@ def main():
             a = float(input("Introduce el primer número: "))
             b = float(input("Introduce el segundo número: "))
 
-            print(f"Suma: {operaciones.suma(a, b)}")
-            print(f"Resta: {operaciones.resta(a, b)}")
-            print(f"Multiplicación: {operaciones.multiplicacion(a, b)}")
-            print(f"División: {operaciones.division(a, b)}")
+            print(f"Suma: {matematicas.suma(a, b)}")
+            print(f"Resta: {matematicas.resta(a, b)}")
+            print(f"Multiplicación: {matematicas.multiplicacion(a, b)}")
+            print(f"División: {matematicas.division(a, b)}")
 
         elif opcion == "2":
             print("\nCálculo de áreas:")
@@ -37,23 +36,23 @@ def main():
             if figura == "1":
                 base = float(input("Base: "))
                 altura = float(input("Altura: "))
-                print("Área del rectángulo:", figuras.area_rectangulo(base, altura))
+                print("Área del rectángulo:", matematicas.area_rectangulo(base, altura))
             elif figura == "2":
                 base = float(input("Base: "))
                 altura = float(input("Altura: "))
-                print("Área del triángulo:", figuras.area_triangulo(base, altura))
+                print("Área del triángulo:", matematicas.area_triangulo(base, altura))
             elif figura == "3":
                 radio = float(input("Radio: "))
-                print("Área del círculo:", figuras.area_circulo(radio))
+                print("Área del círculo:", matematicas.area_circulo(radio))
             else:
                 print("Opción no válida.")
 
         elif opcion == "3":
             print("\nConversiones numéricas:")
             n = input("Introduce un número: ")
-            print("Binario:", conversiones.a_binario(n))
-            print("Hexadecimal:", conversiones.a_hexadecimal(n))
-            print("Convertir de texto a entero:", conversiones.a_entero(n))
+            print("Binario:", matematicas.a_binario(n))
+            print("Hexadecimal:", matematicas.a_hexadecimal(n))
+            print("Convertir de texto a entero:", matematicas.a_entero(n))
 
         elif opcion == "4":
             print("Saliendo del programa...")
