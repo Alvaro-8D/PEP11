@@ -26,7 +26,6 @@
 #     # Se pueden procesar argumentos, inicializar variables, etc.
 #     main()
 
-import math
 from matematicas import operaciones, figuras, conversiones
 
 def menu():
