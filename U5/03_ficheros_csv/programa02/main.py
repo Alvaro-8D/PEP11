@@ -1,7 +1,7 @@
 from os import strerror
 import csv
 try:
-    with open("ciudades.csv") as fichero_csv:
+    with open("capitales.csv", mode="w") as fichero_csv:
         reader = csv.DictReader(fichero_csv, delimiter=",")
         cabeceras = reader.fieldnames
         print(f"Los nombres de las columnas son {cabeceras}")
