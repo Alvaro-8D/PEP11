@@ -1,0 +1,9 @@
+# Ignorar el entorno virtual
+.venv/
+
+# Ignorar la base de datos local (se crea sola)
+db.sqlite3
+
+# Ignorar archivos compilados de Python (buenas prácticas)
+__pycache__/
+*.pyc
