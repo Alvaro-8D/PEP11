@@ -15,6 +15,15 @@
                 <a href="{% url 'nuevo_post' %}">+ Nuevo Post</a>
             </div>
         </header>
+
+        {% if messages %}  <!-- Muestra Mensaje de Error si intentas editar un post que no es tuyo -->
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    <h3 style="color: red;">{{ message }}</h3>
+                </div>
+            {% endfor %}
+        {% endif %}
+
         {% if user.is_authenticated %}
             <p>Hola {{ user.username }}!</p>
             <form action="{% url 'logout' %}" method="post"> {% csrf_token %}
